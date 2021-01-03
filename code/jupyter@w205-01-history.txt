@@ -1,0 +1,500 @@
+   19  cat assessment-attempts-20180128-121051-nested.json | jq '.[1].keen_timestamp'
+   20  clear
+   21  cat assessment-attempts-20180128-121051-nested.json | jq '.[1] | .keen_timestamp'
+   22  cat assessment-attempts-20180128-121051-nested.json | jq '.[10] | .keen_timestamp'
+   23  cat assessment-attempts-20180128-121051-nested.json | jq '.[10] | max_atempts'
+   24  cat assessment-attempts-20180128-121051-nested.json | jq '.[10] | .max_atempts'
+   25  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | .max_atempts'
+   26  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].max_atempts'
+   27  cat assessment-attempts-20180128-121051-nested.json | jq '.[0]'
+   28  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | .max_attempts'
+   29  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | .started_at'
+   30  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | .base_exam_id'
+   31  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | .base_exam_id' | sort
+   32  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | .base_exam_id' | sort | uniq
+   33  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | .exam_name' -r | sort | uniq
+   34  cat assessment-attempts-20180128-121051-nested.json | jq '.[0, 1] | .counts[] | keys'
+   35  cat assessment-attempts-20180128-121051-nested.json | jq '.[0, 1] | .counts | keys'
+   36  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | .counts | keys'
+   37  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | .counts'
+   38  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | sequences.counts'
+   39  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | .sequences.counts'
+   40  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | keys'
+   41  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:2] | keys'
+   42  cat assessment-attempts-20180128-121051-nested.json | jq '.[2] | keys'
+   43  cat assessment-attempts-20180128-121051-nested.json | jq '.[0, 2] | keys'
+   44  cat assessment-attempts-20180128-121051-nested.json | jq '.[0, 2] | keys' | uniq
+   45  cat assessment-attempts-20180128-121051-nested.json | jq '[.[0, 2] | keys]' | uniq
+   46  cat assessment-attempts-20180128-121051-nested.json | jq '.[0, 2] | keys'
+   47  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:2] | keys'
+   48  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | keys'
+   49  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | keys| lenght'
+   50  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | keys | lenght'
+   51  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | keys'
+   52  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | keys | .[0]'
+   53  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | keys'
+   54  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:1] | keys'
+   55  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:5] | keys'
+   56  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:90] | keys'
+   57  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | keys'
+   58  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | keys[0]'
+   59  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | keys[0] | lenght'
+   60  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | keys[0] | len'
+   61  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | keys[0] | lenght'
+   62  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | keys[0] | lenght'
+   63  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | keys[0]'
+   64  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | keys[2]'
+   65  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | keys[3]'
+   66  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | keys[]'
+   67  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | keys[] | lenght'
+   68  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | lenght'
+   69  cat assessment-attempts-20180128-121051-nested.json | jq '.sequences.questions[]'
+   70  cat assessment-attempts-20180128-121051-nested.json | jq '.[0]sequences[].questions[]'
+   71  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences[].questions[]'
+   72  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences'
+   73  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions[]'
+   74  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions.options[]'
+   75  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions.options'
+   76  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions'
+   77  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions.id'
+   78  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions.id[]'
+   79  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions'
+   80  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences | keys'
+   81  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.id'
+   82  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.attempt'
+   83  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions'
+   84  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions[0]'
+   85  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions[]'
+   86  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions[] '
+   87  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions[].options'
+   88  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions[].options[]'
+   89  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions[].options[].correct'
+   90  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions[].options[].correct | lenght'
+   91  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].sequences.questions | lenght'
+   92  cat assessment-attempts-20180128-121051-nested.json | jq '.[0] | lenght'
+   93  cat assessment-attempts-20180128-121051-nested.json | jq '. | lenght'
+   94  assessment-attempts-20180128-121051-nested.json | jq '. | lenght'
+   95  assessment-attempts-20180128-121051-nested.json | jq '.exam_name[] | lenght'
+   96  assessment-attempts-20180128-121051-nested.json | jq '.exam_name[]'
+   97  cat assessment-attempts-20180128-121051-nested.json | jq '.exam_name[]'
+   98  cat assessment-attempts-20180128-121051-nested.json | jq '.exam_name'
+   99  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name'
+  100  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name | lenght'
+  101  assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name | lenght'
+  102  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name | lenght'
+  103  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name | length'
+  104  cat assessment-attempts-20180128-121051-nested.json | jq '.exam_name | length'
+  105  cat assessment-attempts-20180128-121051-nested.json | jq '.exam_name'
+  106  cat assessment-attempts-20180128-121051-nested.json | jq '[].exam_name'
+  107  cat assessment-attempts-20180128-121051-nested.json | jq '[].exam_name[]'
+  108  cat assessment-attempts-20180128-121051-nested.json | jq '[].exam_name'
+  109  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name'
+  110  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name'
+  111  cat assessment-attempts-20180128-121051-nested.json | jq '.exam_name'
+  112  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name'
+  113  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name]'
+  114  cat assessment-attempts-20180128-121051-nested.json | jq '[.[0].exam_name]'
+  115  cat assessment-attempts-20180128-121051-nested.json | jq '[.[0,1].exam_name]'
+  116  cat assessment-attempts-20180128-121051-nested.json | jq '[.[0,1,6].exam_name]'
+  117  cat assessment-attempts-20180128-121051-nested.json | jq '[.[0:6].exam_name]'
+  118  cat assessment-attempts-20180128-121051-nested.json | jq '[.[0:6] | .exam_name]'
+  119  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name]'
+  120  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name] | lenght'
+  121  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name | lenght]'
+  122  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name] | lenght'
+  123  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name]'
+  124  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name] | length'
+  125  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name | length'
+  126  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].exam_name | length'
+  127  cat assessment-attempts-20180128-121051-nested.json | jq '[.[0].exam_name] | length'
+  128  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].exam_name'
+  129  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:10].exam_name'
+  130  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:10]'
+  131  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:10] | .exam_name'
+  132  cat assessment-attempts-20180128-121051-nested.json | jq '.[0]'
+  133  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:2]'
+  134  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:2] | lentgh'
+  135  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:2].exam_name'
+  136  cat assessment-attempts-20180128-121051-nested.json | jq '.[0].exam_name'
+  137  cat assessment-attempts-20180128-121051-nested.json | jq '.[2].exam_name'
+  138  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name'
+  139  cat assessment-attempts-20180128-121051-nested.json | jq '.[0:2].exam_name'
+  140  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name[0]'
+  141  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name]'
+  142  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name].[0]'
+  143  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name][0]'
+  144  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name][2]'
+  145  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name][0:10]'
+  146  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].keen_id]'
+  147  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].keen_id] | lentgh'
+  148  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].keen_id] | length'
+  149  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name]'
+  150  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name == "Learning Git"'
+  151  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name == "Learning Git" | sum'
+  152  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name == "Learning Git"'
+  153  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name == "Learning Git".reduce(sum)'
+  154  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | .exam_name == "Learning Git"'
+  155  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | .exam_name == "Learning Git" | == true'
+  156  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | {boolen = .exam_name == "Learning Git"}'
+  157  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | {boolen: .exam_name == "Learning Git"}'
+  158  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name == "Learning Git"'
+  159  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name == "Learning Git" | length'
+  160  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name == "Learning Git" | true'
+  161  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name == "Learning Git" | true | length'
+  162  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name == "Learning Git" | true | size'
+  163  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name == "Learning Git" | true] | length '
+  164  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name == "Learning Git"] | length '
+  165  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name == "Learning Git" | false] | length '
+  166  cat assessment-attempts-20180128-121051-nested.json | jq '[.[] | select(.exam_name == "Learning Git") | length '
+  167  cat assessment-attempts-20180128-121051-nested.json | jq '[.[] | select(.exam_name == "Learning Git")] | length '
+  168  cat assessment-attempts-20180128-121051-nested.json | jq 'def bow(stream): '
+  169  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name'
+  170  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name]'
+  171  cat assessment-attempts-20180128-121051-nested.json | jq '[.[].exam_name] | length'
+  172  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | [.exam_name] | length'
+  173  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | [.exam_name]'
+  174  cat assessment-attempts-20180128-121051-nested.json | jq '[.[] | .exam_name]'
+  175  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | .exam_name'
+  176  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | {test: .exam_name}'
+  177  cat assessment-attempts-20180128-121051-nested.json | jq '.[] | {.exam_name: 1}'
+  178  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name'
+  179  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name | keys'
+  180  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name | key'
+  181  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name | uniq'
+  182  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name'
+  183  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name' -r | uniq
+  184  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name'
+  185  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name' -r | sort | uniq-c
+  186  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name' -r
+  187  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name' -r | sort
+  188  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name' -r | sort | uniq
+  189  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name' -r | sort | uniq -c
+  190  cat assessment-attempts-20180128-121051-nested.json | jq '.[].exam_name' -r | sort | uniq -c | sort -gr
+  191  cd ..
+  192  ls
+  193  ls
+  194  cd course-content-fall2020
+  195  ls
+  196  git pull origin master
+  197  ls
+  198  clear
+  199  cd ..
+  200  mkdir kafka
+  201  ls
+  202  cd kafka
+  203  cd ..
+  204  cp ~/w205/course-content-fall2020/06-Transforming-Data/docker-compose.yml ~/w205/kafka/
+  205  cd kafka
+  206  ls
+  207  clear
+  208  docker-compose up -d
+  209  docker-compose up -d
+  210  docker ps
+  211  docker-compose up -d
+  212  docker-compose up -d
+  213  docker ps
+  214  clear
+  215  docker-compose exec kafka   kafka-topics     --create     --topic foo     --partitions 1     --replication-factor 1     --if-not-exists     --zookeeper zookeeper:32181
+  216  cd w205
+  217  cd kafka
+  218  docker-compose exec kafka   kafka-topics     --create     --topic foo     --partitions 1     --replication-factor 1     --if-not-exists     --zookeeper zookeeper:32181
+  219  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  220  docker-compose exec kafka   kafka-topics     --describe     --topic foo     --zookeeper zookeeper:32181
+  221  docker-compose exec kafka   bash -c "seq 42 | kafka-console-producer \
+  222      --request-required-acks 1 \
+  223      --broker-list localhost:29092 \
+  224      --topic foo && echo 'Produced 42 messages.'"
+  225  clear
+  226  docker-compose exec kafka   kafka-console-consumer     --bootstrap-server localhost:29092     --topic foo     --from-beginning     --max-messages 15
+  227  docker-compose exec kafka   kafka-console-consumer     --bootstrap-server localhost:29092     --topic foo     --from-beginning     --max-messages 42
+  228  curl -L -o github-example-large.json https://goo.gl/Y4MD58
+  229  ls
+  230  clear
+  231      docker-compose exec kafka     kafka-topics       --create       --topic foo       --partitions 1       --replication-factor 1       --if-not-exists curl -L -o github-example-large.json https://goo.gl/Y4MD58
+  232  clear
+  233      docker-compose exec kafka     kafka-topics       --create       --topic json1       --partitions 1       --replication-factor 1       --if-not-exists       --zookeeper zookeeper:32181
+  234  clear
+  235  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json"
+  236  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json"
+  237  docker-compose exec mids bash -c "ls"
+  238  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.'"
+  239  kafkacat -P -b kafka:29092 -t json1 && echo 'Produced 100 messages, uhuh!'"
+  240  docker ps
+  241  docker stop kafka_kafka_1
+  242  docker stop kafka_zookeeper_1
+  243  docker stop kafka_mids_1
+  244  docker ps
+  245  clear
+  246  docker run redis
+  247  docker run -d redis
+  248  docker ps
+  249  man docker
+  250  man docker run
+  251  docker ps
+  252  docker stop quirky_benz
+  253  docker ps
+  254  docker run -d --name redis redis
+  255  docker ps
+  256  cd w205
+  257  docker ps
+  258  ls
+  259  cd kafka
+  260  docker ps
+  261  cd ..
+  262  clear
+  263  docker run -d --name lucas redis
+  264  docker ps
+  265  docker stop lucas
+  266  docker ps
+  267  clear
+  268  docker run -d --name redis -p 6379:6379 redis
+  269  docker rm redis
+  270  docker run -d --name redis -p 6379:6379 redis
+  271  docker ps
+  272  man docker un
+  273  man docker run
+  274  docker ps
+  275  docker stop redis
+  276  docker ps
+  277  clar
+  278  clear
+  279  sudo apt update
+  280  sudo apt install docker-compose
+  281  clear
+  282  mkdir redis-standalone
+  283  cp ~/w205/course-content-fall2020/05-Storing-Data-II/example-0-docker-compose.yml ~/w205/redis-standalone/
+  284  cd redis-standalone
+  285  mv example-0-docker-compose.yml docker-compose.yml
+  286  ls
+  287  docker-compose up -d
+  288  docker ps
+  289  docker stop 7b9095093fdb 
+  290  docker ps
+  291  example_docker-compose up -d
+  292  docker-compose up -d
+  293  docker-compose up -d
+  294  docker-compose ps
+  295  docker-compose logs redis
+  296  ipython
+  297  docker-compose down
+  298  docker-compose ps
+  299  cd ..
+  300  mkdir redis-cluster
+  301  ls
+  302  cd course-content-fall2020
+  303  ls
+  304  cd 05-Storing-Data-II
+  305  ls
+  306  cp example-1-docker-compose.yml ~/w205/redis-cluster/docker-compose.yml
+  307  cd ~/w205/redis-cluster
+  308  cat docker-compose.yml
+  309  docker-compose up -d
+  310  docker-compose ps
+  311  docker-compose logs redis
+  312  docker-compose exec mids bash
+  313  docker-compose down
+  314  docker-compose ps
+  315  docker-compose up -d
+  316  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  317  docker-compose down
+  318  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  319  docker-compose ps
+  320  docker ps
+  321  ls
+  322  docker-compose up -d
+  323  docker-compose ps
+  324  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  325  docker-compose down
+  326  docker ps
+  327  clear
+  328  docker-compose up -d
+  329  docker-compose ps
+  330  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  331  docker-compose down
+  332  docker ps
+  333  docker-compose up -d
+  334  docker-compose logs mids
+  335  docker-composed down
+  336  docker-compose down
+  337  clear
+  338  docker-compose up -d
+  339  docker-compose ps
+  340  docker-compose down
+  341  cd ~/w205/kafka
+  342  docker-compose up -d
+  343  docker-compose ps
+  344  docker-compose logs zookeeper
+  345  docker-compose logs zookeeper | grep -i binding
+  346  deck-compose logs kafka | grep -i started
+  347  docker-compose logs kafka | grep -i started
+  348  docker-compose exec kafka \ kafka-topics \ --create \ --topic foo \ --partitions 1 \ --replication-factor 1 \ --if-not-existis \ --zookeeper zookeeper:32181
+  349  docker-compose exec kafka \ kafka-topics \ --create \ --topic foo \ --partitions 1 \ --replication-factor 1 \ --if-not-exists \ --zookeeper zookeeper:32181
+  350  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  351  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  352  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  353  docker-compose exec kafka bash -c "seq 42 | kafka-console-producer --request-required-acks 1 --broker-list localhost:29092 --topic foo && echo 'Produced 42 messages.'"
+  354  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic foo --from-beginning --max-messages 42
+  355  docker-compose down
+  356  docker-compose up -d
+  357  docker-compose logs -f kafka
+  358  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  359  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  360  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json"
+  361  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.'"
+  362  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c"
+  363  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  364  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic foo --from-beginning --max-messages 42
+  365  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e"
+  366  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e" | wc -l
+  367  docker-compose down
+  368  cd ..
+  369  cp ~/w205/course-content-fall2020/08-Querying-Data/docker-compose.yml ~/w205/project-2-lbrossi/docker-compose.yml
+  370  cd project-2-lbrossi
+  371  docker-compose up -d
+  372  docker compose-ps
+  373  docker-compose ps
+  374  docker-compose exec kafka
+  375  docker-compose exec kafka kafka-topics -- create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  376  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  377  docker-compose exec kafka kafka-topics --describe --topic assessments --zookeeper zookeeper:32181
+  378  docker-compose exec mids bash -c "cat /w205/project-2-lbrossi/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c"
+  379  docker-compose exec mids bash -c "cat /w205/project-2-lbrossi/assessment-attempts-20180128-121051.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments && echo 'Produced 3280 messages.'
+  380  docker-compose exec mids bash -c "cat /w205/project-2-lbrossi/assessment-attempts-20180128-121051.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments && echo 'Produced 3280 messages.'"
+  381  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e"
+  382  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e" | wc -l
+  383  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic foo --from-beginning --max-messages 1
+  384  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic assessments --from-beginning --max-messages 1
+  385  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic assessments --from-beginning --max-messages 10
+  386  docker-compose down
+  387  docker-compose up -d
+  388  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  389  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  390  docker-compose exec mids bash -c "cat /w205/project-2-lbrossi/assessment-attempts-20180128-121051.json | jq '.[]' -c | wc-l"
+  391  docker-compose exec mids bash -c "cat /w205/project-2-lbrossi/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | wc-l"
+  392  docker-compose exec mids bash -c "cat /w205/project-2-lbrossi/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | wc -l"
+  393  docker-compose exec mids bash -c "cat /w205/project-2-lbrossi/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments && echo 'Produced 3280 messages.'"
+  394  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e"
+  395  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o 3270 -e"
+  396  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o 3279 -e"
+  397  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beggining -e | wc -l"
+  398  history > jupyter@w205-01-history.txt
+  399  clear
+  400  git branch
+  401  git add.
+  402  git add .
+  403  git committ -m 'first commit'
+  404  git commit -m 'first commit'
+  405  git push assignment origin
+  406  git push origin assignment
+  407  exit
+  408  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t json1 && echo 'Produced 100 messages.'"
+  409  cd w205
+  410  cd kafka
+  411  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t json1 && echo 'Produced 100 messages.'"
+  412  docker-compose exec kafa kafka-topics --describe --topic json1 --zookeeper zookeeper:32181
+  413  docker-compose exec kafka kafka-topics --describe --topic json1 --zookeeper zookeeper:32181
+  414  docker-compose exec kafka   kafka-console-consumer     --bootstrap-server kafka:29092     --topic foo     --from-beginning     --max-messages docker-compose exec kafka \42
+  415  docker-compose exec kafka   kafka-console-consumer     --bootstrap-server kafka:29092     --topic json1     --from-beginning     --max-messages 42
+  416  clear
+  417  clear
+  418  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t json1 -o beginning -e"
+  419  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t json1 -o 98 -e"
+  420  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t json1 -o 99 -e"
+  421  clear
+  422  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t json1 -o 99 -e" | wc -1
+  423  cd w205/course-content-fall2020
+  424  git pull origin master
+  425  git pull origin master
+  426  ls
+  427  cd ..
+  428  mkdir spark-with-kafka
+  429  cd spark-with-kafka
+  430  cp ~/w205/course-content-fall2020/07-Sourcing-Data/docker-compose.yml
+  431  cp ~/w205/course-content-fall2020/07-Sourcing-Data/docker-compose.yml ~/w205/spark-with-kafka/
+  432  ls
+  433  docker-compose up -d
+  434  docker-compose ls
+  435  docker-compose ps
+  436  docker-compose logs -f kafka
+  437  docker-compose exec kafka kafka topics --create --topic foo --partition 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  438  curl -L -o github-example-large.json https://goo.gl/Y4MD58
+  439  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  440  docker-compose exec kafka   kafka-topics   --describe   --topic foo   --zookeeper zookeeper:32181
+  441  docker-compose exec kafka   bash -c "seq 42 | kafka-console-producer \
+  442      --request-required-acks 1 \
+  443      --broker-list kafka:29092 \
+  444      --topic foo && echo 'Produced 42 messages.'"
+  445  docker-compose exec spark pyspark
+  446  docker-compose down
+  447  docker-compose up -d
+  448  docker-compose ps
+  449  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  450  docker-compose exec mids   bash -c "cat /w205/github-example-large.json \
+  451      | jq '.[]' -c \
+  452      | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  453  docker-compose exec mids ls
+  454  docker-compose exec spark pyspark
+  455  docker-compose ps
+  456  docker-compose exec mids   bash -c "cat /w205/github-example-large.json \
+  457      | jq '.[]' -c \
+  458      | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  459  docker-compose exec mids   bash -c "cat /w205/spark-with-kafka/github-example-large.json \
+  460      | jq '.[]' -c \
+  461      | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  462  docker-compose exec spark pyspark
+  463  cd w205
+  464  ls
+  465  cd course-content-fall2020
+  466  git pull origin master
+  467  ls
+  468  cd 08-Querying-Data
+  469  cd ..
+  470  cd ..
+  471  mkdir spark-with-kafka-and-hdfs
+  472  ls
+  473  cd ~/w205/spark-with-kafka-and-hdfs
+  474  cp ~/w205/course-content//08-Querying-Data/docker-compose.yml
+  475  cp ~/w205/course-content-fall2020/08-Querying-Data/docker-compose.yml
+  476  cp ~/w205/course-content-fall2020/08-Querying-Data/docker-compose.yml ~/w205/spark-with-kafka-and-hdfs
+  477  ls
+  478  curl -L -o players.json https://goo.gl/vsuCpZ
+  479  docker compose-ps
+  480  docker-compose ps
+  481  docker-compose up -d
+  482  docker ps
+  483  docker-compose exec cloudera hadoop fs -ls /tmp/
+  484  docker-compose exec kafka   kafka-topics     --create     --topic players     --partitions 1     --replication-factor 1     --if-not-exists     --zookeeper zookeeper:32181
+  485  docker-compose exec mids   bash -c "cat /w205/<your_workspace>/players.json \
+  486      | jq '.[]' -c \
+  487  docker-compose exec kafka   kafka-topics     --create     --topic players     --partitions 1     --replication-factor 1     --if-not-exists     --zookeeper zookeeper:32181[Bocker-compose exec mids \
+  488    bash -c "cat /w205/spark-with-kafka-and-hdfs/players.json     | jq '.[]' -c     | kafkacat -P -b kafka:29092 -t players"
+  489  docker-compose exec mids \
+  490    bash -c "cat /w205/spark-with-kafka-and-hdfs/players.json     | jq '.[]' -c     | kafkacat -P -b kafka:29092 -t players"
+  491  docker-compose exec mids   bash -c "cat /w205/spark-with-kafka-and-hdfs/players.json \
+  492      | jq '.[]' -c \
+  493      | kafkacat -P -b kafka:29092 -t players"
+  494  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+  495  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+  496  cp ~/w205/course-content-fall2020/08-Querying-Data/docker-compose.yml ~/w205/spark-with-kafka-and-hdfs/docker-compose.yml
+  497  docker-compose ps
+  498  cd w205
+  499  cd spark-with-kafka-and-hdfs
+  500  docker-compose ps
+  501  docker-compose down
+  502  docker-compose up -d
+  503  docker-compose ps
+  504  docker-compose exec cloudera hadoop fs -ls /tmp/
+  505  docker-compose exec kafka kafka-topics --create --topic players --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  506  docker-compose exec mids bash -c "cat /w205/spark-with-kafka-and-hdfs/players.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t players"
+  507  docker-compose exec spark pyspark
+  508  docker-compose down
+  509  cd ..
+  510  cd project-2-lbrossi
+  511  cat .gitignore
+  512  cat .gitignore
+  513  git status
+  514  touch .gitignore
+  515  echo data_exploration.ipnynb >> .gitignore
+  516  echo cli.coding.md >> .gitignore
+  517  echo derby.log >> .gitignore
+  518  history > jupyter@w205-01-history.txt
